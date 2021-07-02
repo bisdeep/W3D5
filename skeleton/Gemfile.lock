@@ -18,11 +18,19 @@ GEM
     rspec-support (3.2.2)
 
 PLATFORMS
+<<<<<<< HEAD
   x86_64-linux
+=======
+  x86_64-darwin-19
+>>>>>>> b501fb87c97cf6bf795205704082f4724620d2f9
 
 DEPENDENCIES
   byebug
   rspec (~> 3.2.0)
 
 BUNDLED WITH
+<<<<<<< HEAD
    2.2.20
+=======
+   2.2.18
+>>>>>>> b501fb87c97cf6bf795205704082f4724620d2f9
