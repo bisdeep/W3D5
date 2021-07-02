@@ -19,24 +19,27 @@ class PolyTreeNode
 
     def remove_child(node)
         raise "Error" if node.parent.children.none? {|child| child == node }
-        
         node.parent = nil
-        
     end
 
     def dfs(value)
         return self if value == self.value
-
         self.children.each do |child|
             results = child.dfs(value)
-            return child if (results != nil) && (results.value == value)
+            return results if (results != nil) 
         end
         nil
-
     end
-    
+    def bfs(value)
+        queue = [self] 
+        until queue.empty? 
+            if queue.first.value == value 
+                return queue.first
+            else 
+                queue += queue.first.children
+                queue.shift 
+            end 
+        end
+        nil 
+    end
 end
-    #a
-  # b c
- # c d e
-# f g h i
